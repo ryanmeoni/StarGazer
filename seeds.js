@@ -10,7 +10,7 @@ var data = [{
         id: mongoose.Types.ObjectId(),
         username: "Seeded"
     }
-}]
+}];
 
 function seedDB() {
     //Remove all posts
@@ -23,7 +23,7 @@ function seedDB() {
         data.forEach(function(seed) {
             Post.create(seed, function(err, post) {
                 if (err) {
-                    console.log(err)
+                    console.log(err);
                 }
                 else {
                     console.log("added a post");
