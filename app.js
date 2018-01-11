@@ -6,14 +6,14 @@ var express     = require("express"),
     passport    = require("passport"),
     LocalStrategy = require("passport-local"),
     methodOverride = require("method-override"),
-    Campground  = require("./models/campground"),
+    Post  = require("./models/post"),
     Comment     = require("./models/comment"),
     User        = require("./models/user"),
     seedDB      = require("./seeds")
     
 //requiring routes
 var commentRoutes    = require("./routes/comments"),
-    campgroundRoutes = require("./routes/campgrounds"),
+    postRoutes = require("./routes/posts"),
     indexRoutes      = require("./routes/index")
     
 //mongoose.connect("mongodb://localhost/yelp_camp_v11Deployed");
@@ -48,10 +48,10 @@ app.use(function(req, res, next){
 });
 
 app.use("/", indexRoutes);
-app.use("/campgrounds", campgroundRoutes);
-app.use("/campgrounds/:id/comments", commentRoutes);
+app.use("/posts", postRoutes);
+app.use("/posts/:id/comments", commentRoutes);
 
 
 app.listen(process.env.PORT, process.env.IP, function(){
-   console.log("The YelpCamp Server Has Started!");
+   console.log("The StarGazer Server Has Started!");
 });
