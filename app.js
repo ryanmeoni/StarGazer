@@ -25,7 +25,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
-// seedDB(); //seed the database
+// seedDB(); //seed the database from MLab
 
 app.locals.moment = require('moment');
 // PASSPORT CONFIGURATION. app.use(flash()) needs to come before our passport config!
