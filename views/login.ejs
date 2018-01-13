@@ -1,12 +1,12 @@
 <% include ./partials/header %> 
 
-<h1>Login!</h1>
-
 <form action = "/login" method = "post">
-    <input type = "text" name = "username" placeholder = "username"> 
-    <input type = "password" name = "password" placeholder = "password"> 
-    <input type = "submit" value = "Login">
-    
+    <div class = "SignupLogin">
+    <h1 class = "prompt">Login</h1>
+    <input class = "reg" type = "text" name = "username" placeholder = "username"> 
+    <input class = "reg" type = "password" name = "password" placeholder = "password"> 
+    <input class = "btn btn-primary" type = "submit" value = "Login">
+    </div>
 </form>
 
 <% include ./partials/footer %>

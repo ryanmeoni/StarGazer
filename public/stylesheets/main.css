@@ -20,3 +20,30 @@
     
     margin: 25px auto;
 }
+
+.SignupLogin {
+    
+    position: relative;
+  text-align: center;
+  padding-top: 20vh;
+ 
+}
+
+.reg {
+    
+    background-size: 40px; 
+    font-size: 20px;
+
+}
+
+.reg:hover {
+    
+    background-color: #DCD5D5;
+    
+}
+
+.prompt {
+    
+    font-size: 30px;
+    
+}
