@@ -4,6 +4,8 @@
 
 .thumbnail {
     padding: 0;
+    background-color: black;
+    
 }
 
 .thumbnail .caption-full {
@@ -21,6 +23,7 @@
     margin: 25px auto;
 }
 
+/*Move signup/login inputs to center*/
 .SignupLogin {
     
     position: relative;
@@ -29,6 +32,7 @@
  
 }
 
+/*Change inputs style*/
 .reg {
     
     background-size: 40px; 
@@ -36,12 +40,14 @@
 
 }
 
+/*Small hover effect on inputs for signup/login*/
 .reg:hover {
     
     background-color: #DCD5D5;
     
 }
 
+/*Login/Signup prompts*/
 .prompt {
     
     font-size: 30px;
@@ -49,8 +55,70 @@
     
 }
 
+/*set background color for each page*/
 body {
     
     background-color: black;
     
+}
+
+/*Each post's descrption area on show page*/
+#desc {
+    
+    color: white;
+}
+
+.jumbotron {
+    
+    background-color: black;
+    border: white 1px solid;
+}
+
+#welcome1 {
+    
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+#welcome2 {
+    
+    color: white;
+}
+
+#newPostButton {
+    position: relative;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    border-radius: 50px;
+}
+
+.container-fluid {
+    background-color: black;
+    border: white 3px solid;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+}
+
+#link1 {
+    color: white;
+}
+
+#link2 {
+    color: white;
+}
+
+#link3 {
+    color: white;
+}
+
+#link4 {
+    color:white;
+}
+
+#link5 {
+    color:white;
 }

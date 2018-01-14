@@ -11,17 +11,17 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">StarGazer</a>
+                <a class="navbar-brand" id = "link1" href="/">StarGazer</a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     
                     <% if (!currentUser) { %> 
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Sign Up</a></li>
+                    <li><a id = "link2" href="/login">Login</a></li>
+                    <li><a id = "link3" href="/register">Sign Up</a></li>
                    <% } else { %> 
-                    <li><a> Signed In As: <%= currentUser.username %> </a></li>
-                    <li><a href="/logout">Logout</a></li>
+                    <li><a id = "link4"> Signed In As: <%= currentUser.username %> </a></li>
+                    <li><a id = "link5" href="/logout">Logout</a></li>
                    <% } %> 
                 </ul>
             </div>
