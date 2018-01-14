@@ -45,5 +45,12 @@
 .prompt {
     
     font-size: 30px;
+    color: white;
+    
+}
+
+body {
+    
+    background-color: black;
     
 }
