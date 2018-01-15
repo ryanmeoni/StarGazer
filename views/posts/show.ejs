@@ -9,8 +9,8 @@
                 <img class="img-responsive" src="<%= post.image %>">
                 <div class="caption-full">
                     <h4><a><%=post.name%></a></h4>
-                    <p><%= post.description %></p>
-                    <p>
+                    <p id = "postDescription"><%= post.description %></p>
+                    <p id = "submittedBy">
                         <em>Submitted By <%= post.author.username %>, <%= moment(post.createdAt).fromNow() %></em>
                     </p>
                     <% if(currentUser && post.author.id.equals(currentUser._id)){ %>
@@ -29,9 +29,9 @@
                 <% post.comments.forEach(function(comment){ %>
                     <div class="row">
                         <div class="col-md-12">
-                            <strong><%= comment.author.username %></strong>
+                            <strong id = "commentUser"><%= comment.author.username %></strong>
                             <span class="pull-right"><%= moment(comment.createdAt).fromNow() %></span>
-                            <p>
+                            <p id = "commentText">
                                 <%= comment.text %> 
                             </p>
                         <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
