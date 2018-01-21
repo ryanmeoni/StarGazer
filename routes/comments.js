@@ -36,6 +36,7 @@ router.post("/",middleware.isLoggedIn,function(req, res){
                comment.author.username = req.user.username;
                //save comment
                comment.save();
+               console.log('***********', comment.author);
                post.comments.push(comment);
                post.save();
                console.log(comment);
@@ -48,12 +49,13 @@ router.post("/",middleware.isLoggedIn,function(req, res){
 });
 
 // COMMENT EDIT ROUTE
-router.get("/:comment_id/edit", middleware.checkCommentOwnership, function(req, res){
+router.get("/:comment_id/edit", function(req, res){
    Comment.findById(req.params.comment_id, function(err, foundComment){
       if(err){
           req.flash("error", "cannot edit comment!");
           res.redirect("back");
       } else {
+          console.log('********************', foundComment.author)
         res.render("comments/edit", {post_id: req.params.id, comment: foundComment});
       }
    });
